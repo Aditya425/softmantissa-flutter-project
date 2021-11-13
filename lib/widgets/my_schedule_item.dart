@@ -18,19 +18,22 @@ class MyScheduleItem extends StatelessWidget {
           Text(
             "Date and time",
             style: TextStyle(
-              color: Colors.black
+              color: Colors.black,
+              fontSize: 20
             ),
           ),
           Text(
             "Available",
             style: TextStyle(
-              color: Colors.red
+              color: Colors.red,
+                fontSize: 20
             ),
           ),
           Text(
             "Reason",
             style: TextStyle(
-                color: Colors.red
+                color: Colors.red,
+                fontSize: 20
             ),
           ),
           Row(
@@ -38,25 +41,28 @@ class MyScheduleItem extends StatelessWidget {
               Text(
                 "Edit",
                 style: TextStyle(
-                    color: Colors.red
+                    color: Colors.red,
+                    fontSize: 20
                 ),
               ),
               Text(
                 " | ",
                 style: TextStyle(
-                    color: Colors.red
+                    color: Colors.red,
+                    fontSize: 20
                 ),
               ),
               Text(
                 "Delete",
                 style: TextStyle(
-                    color: Colors.green
+                    color: Colors.green,
+                    fontSize: 20
                 ),
               )
             ],
           ),
           SizedBox(
-            height: 20,
+            height: 30,
           )
         ],
       ),

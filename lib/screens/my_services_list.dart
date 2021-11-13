@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:registration_form/constants.dart';
+import 'package:registration_form/screens/add_service.dart';
 import 'package:registration_form/widgets/list_item.dart';
 import 'package:registration_form/widgets/bottom_bar_item.dart';
 
@@ -11,7 +12,6 @@ class MyServicesList extends StatefulWidget {
 }
 
 class _MyServicesListState extends State<MyServicesList> {
-  int _bottomBarIndex = 0;
   List<ListItem> getListItem() {
     List<ListItem> list = [];
     for (int i = 0; i <= 5; i++) {
@@ -35,39 +35,6 @@ class _MyServicesListState extends State<MyServicesList> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: BottomNavigationBar(
-        type: BottomNavigationBarType.shifting,
-        currentIndex: _bottomBarIndex,
-        onTap: (index) {
-          setState(() {
-            _bottomBarIndex = index;
-          });
-        },
-        backgroundColor: Colors.green,
-        showUnselectedLabels: true,
-        items: <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(null),
-            label: "Services",
-            backgroundColor: Colors.green
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(null),
-            label: "Schedule",
-            backgroundColor: Colors.green
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(null),
-            label: "Appointments",
-            backgroundColor: Colors.green
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(null),
-            label: "Account",
-            backgroundColor: Colors.green
-          )
-        ],
-      ),
       appBar: AppBar(
         title: Text(
           "My Services List",
@@ -79,7 +46,9 @@ class _MyServicesListState extends State<MyServicesList> {
         child: Icon(
           Icons.add
         ),
-        onPressed: () {},
+        onPressed: () {
+          Navigator.pushNamed(context, AddService.id);
+        },
       ),
       body: SafeArea(
         child: ListView(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:registration_form/screens/appointments.dart';
 import 'package:registration_form/screens/my_schedules.dart';
 import 'package:registration_form/screens/my_services_list.dart';
 
@@ -12,7 +13,7 @@ class MainBottomNavBar extends StatefulWidget {
 
 class _MainBottomNavBarState extends State<MainBottomNavBar> {
   var _bottomBarIndex = 0;
-  var _screens = [MyServicesList(), MySchedules()];
+  var _screens = [MyServicesList(), MySchedules(), Appointments()];
   @override
   Widget build(BuildContext context) {
     return Scaffold(

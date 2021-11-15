@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:registration_form/screens/account.dart';
 import 'package:registration_form/screens/add_schedules.dart';
 import 'package:registration_form/screens/add_service.dart';
+import 'package:registration_form/screens/appointments_screen_2.dart';
 import 'package:registration_form/screens/main_bottom_nav_bar.dart';
 import 'package:registration_form/screens/my_schedules.dart';
 import 'package:registration_form/screens/my_services_list.dart';
@@ -27,7 +28,8 @@ class _MyAppState extends State<MyApp> {
         AddService.id : (context) => AddService(),
         MySchedules.id : (context) => MySchedules(),
         Account.id : (context) => Account(),
-        AddSchedules.id : (context) => AddSchedules()
+        AddSchedules.id : (context) => AddSchedules(),
+        AppointmentsScreen2.id : (context) => AppointmentsScreen2()
       },
       initialRoute: MainBottomNavBar.id
     );

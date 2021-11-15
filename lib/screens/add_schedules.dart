@@ -94,7 +94,7 @@ class _AddSchedulesState extends State<AddSchedules> {
               ),
             ),
             SizedBox(
-              height: 10,
+              height: 9,
             ),
             Container(
               decoration: BoxDecoration(

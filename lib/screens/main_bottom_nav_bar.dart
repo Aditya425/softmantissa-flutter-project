@@ -17,40 +17,108 @@ class _MainBottomNavBarState extends State<MainBottomNavBar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: BottomNavigationBar(
-        type: BottomNavigationBarType.shifting,
-        currentIndex: _bottomBarIndex,
-        onTap: (index) {
-          setState(() {
-            _bottomBarIndex = index;
-          });
-        },
-        backgroundColor: Colors.white,
-        selectedFontSize: 20,
-        unselectedFontSize: 15,
-        showUnselectedLabels: true,
-        items: <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-              icon: Icon(null),
-              label: "Services",
-              backgroundColor: Colors.green,
+      bottomNavigationBar: BottomAppBar(
+        child: Expanded(
+          child: Row(
+            children: [
+              Expanded(
+                child: GestureDetector(
+                  onTap: () {
+                    setState(() {
+                      _bottomBarIndex = 0;
+                    });
+                  },
+                  child: Container(
+                    height: 60,
+                    decoration:
+                        BoxDecoration(
+                            border: Border.all(color: Colors.blue),
+                          color: _bottomBarIndex == 0 ? Colors.green : Colors.white
+                        ),
+                    child: Center(
+                      child: Text(
+                        "Services",
+                        style: TextStyle(
+                            color: _bottomBarIndex == 0 ? Colors.black : Colors.green,
+                            fontSize: 25),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              Expanded(
+                  child: GestureDetector(
+                    onTap: () {
+                      setState(() {
+                        _bottomBarIndex = 1;
+                      });
+                    },
+                    child: Container(
+                      height: 60,
+                decoration:
+                      BoxDecoration(
+                          border: Border.all(color: Colors.blue),
+                          color: _bottomBarIndex == 1 ? Colors.green : Colors.white),
+                child: Center(
+                    child: Text(
+                      "Schedule",
+                      style: TextStyle(
+                          color: _bottomBarIndex == 1 ? Colors.black : Colors.green,
+                          fontSize: 20),
+                    ),
+                ),
+              ),
+                  )),
+              Expanded(
+                  child: GestureDetector(
+                    onTap: () {
+                      setState(() {
+                        _bottomBarIndex = 2;
+                      });
+                    },
+                    child: Container(
+                      height: 60,
+                decoration:
+                      BoxDecoration(
+                          border: Border.all(color: Colors.blue),
+                          color: _bottomBarIndex == 2 ? Colors.green : Colors.white),
+                child: Center(
+                    child: Text(
+                      "Appointments",
+                      style: TextStyle(
+                          color: _bottomBarIndex == 2 ? Colors.black : Colors.green,
+                          fontSize: 15),
+                    ),
+                ),
+              ),
+                  )),
+              Expanded(
+                  child: GestureDetector(
+                    onTap: () {
+                      setState(() {
+                        _bottomBarIndex = 3;
+                      });
+                    },
+                    child: Container(
+                      height: 60,
+                decoration:
+                      BoxDecoration(
+                          border: Border.all(color: Colors.blue),
+                          color: _bottomBarIndex == 3 ? Colors.green : Colors.white
+                      ),
+                child: Center(
+                    child: Text(
+                      "Account",
+                      style: TextStyle(
+                          color: _bottomBarIndex == 3 ? Colors.black : Colors.green,
+                          fontSize: 25),
+                    ),
+                ),
+              ),
+                  ))
+            ],
           ),
-          BottomNavigationBarItem(
-              icon: Icon(null),
-              label: "Schedule",
-              backgroundColor: Colors.green
-          ),
-          BottomNavigationBarItem(
-              icon: Icon(null),
-              label: "Appointments",
-              backgroundColor: Colors.green
-          ),
-          BottomNavigationBarItem(
-              icon: Icon(null),
-              label: "Account",
-              backgroundColor: Colors.green
-          )
-        ],
+        ),
       ),
       body: _screens[_bottomBarIndex],
     );

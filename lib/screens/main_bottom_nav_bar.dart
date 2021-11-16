@@ -33,7 +33,7 @@ class _MainBottomNavBarState extends State<MainBottomNavBar> {
           BottomNavigationBarItem(
               icon: Icon(null),
               label: "Services",
-              backgroundColor: Colors.green
+              backgroundColor: Colors.green,
           ),
           BottomNavigationBarItem(
               icon: Icon(null),

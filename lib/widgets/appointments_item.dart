@@ -18,32 +18,48 @@ class AppointmentsItem extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            "Cost"
+            "Cost",
+            style: TextStyle(
+              fontSize: 18
+            ),
           ),
           Text(
             "Service",
             style: TextStyle(
-              color: Colors.green
+              color: Colors.green,
+              fontSize: 18
             ),
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              GestureDetector(
+              InkWell(
                 onTap: onPressed,
-                child: Text(
-                  "Approve | ",
-                  style: TextStyle(
-                    color: Colors.red
+                splashColor: Colors.red,
+                focusColor: Colors.grey,
+                child: Container(
+                  height: 30,
+                  child: Text(
+                    "Approve | ",
+                    style: TextStyle(
+                      color: Colors.red,
+                      fontSize: 18
+                    ),
                   ),
                 ),
               ),
-              GestureDetector(
+              InkWell(
                 onTap: onPressed,
-                child: Text(
-                  " Reject",
-                  style: TextStyle(
-                      color: Colors.red
+                splashColor: Colors.red,
+                focusColor: Colors.grey,
+                child: Container(
+                  height: 30,
+                  child: Text(
+                    " Reject",
+                    style: TextStyle(
+                        color: Colors.red,
+                      fontSize: 18
+                    ),
                   ),
                 ),
               )

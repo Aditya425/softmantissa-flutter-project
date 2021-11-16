@@ -6,8 +6,8 @@ import 'package:registration_form/widgets/appointments_item.dart';
 class Appointments extends StatelessWidget {
   const Appointments({Key? key}) : super(key: key);
 
-  List<AppointmentsItem> _getAppointmentsItem(BuildContext context) {
-    List<AppointmentsItem> list = [];
+  List<Widget> _getAppointmentsItem(BuildContext context) {
+    List<Widget> list = [];
     for (int i = 0; i < 5; i++) {
       AppointmentsItem item = AppointmentsItem(
         onPressed: () {
@@ -15,6 +15,11 @@ class Appointments extends StatelessWidget {
         },
       );
       list.add(item);
+      list.add(
+        SizedBox(
+          height: 30,
+        )
+      );
     }
     return list;
   }

@@ -3,6 +3,8 @@ import 'package:registration_form/screens/appointments.dart';
 import 'package:registration_form/screens/my_schedules.dart';
 import 'package:registration_form/screens/my_services_list.dart';
 
+import 'my_account.dart';
+
 class MainBottomNavBar extends StatefulWidget {
   const MainBottomNavBar({Key? key}) : super(key: key);
   static String id = "MainBottomNavBar";
@@ -13,7 +15,7 @@ class MainBottomNavBar extends StatefulWidget {
 
 class _MainBottomNavBarState extends State<MainBottomNavBar> {
   var _bottomBarIndex = 0;
-  var _screens = [MyServicesList(), MySchedules(), Appointments()];
+  var _screens = [MyServicesList(), MySchedules(), Appointments(),MyAccount()];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
